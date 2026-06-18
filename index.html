@@ -108,6 +108,8 @@
     font-size: .82rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
   }
   .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+  .now-status { display: flex; align-items: center; gap: 9px; font-size: .92rem; color: var(--text-soft); font-weight: 500; margin: -12px 0 22px; }
+  .now-status .now-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; flex-shrink: 0; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
   .hero h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 1.02; letter-spacing: -.035em; margin-bottom: 22px; }
   .hero h1 em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -180,6 +182,8 @@
   .tl-item h3 { font-size: 1.12rem; margin: 4px 0 2px; }
   .tl-item .org { color: var(--text-soft); font-weight: 500; font-size: .95rem; margin-bottom: 8px; }
   .tl-item p { color: var(--text-soft); font-size: .95rem; }
+  .tl-item.current::before { animation: pulse 2s infinite; }
+  .tl-now { display: inline-block; font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--grad); padding: 3px 9px; border-radius: 999px; vertical-align: middle; margin-left: 8px; }
 
   /* ---------- HIGHLIGHTS ---------- */
   .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
@@ -273,6 +277,7 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Seeking full-time roles · Florida or Texas</span>
+      <div class="now-status"><span class="now-dot"></span>Currently a Sales Intern at Foundation Risk Partners HQ · Summer 2026</div>
       <h1>Building ventures, backing founders, and <em>getting deals done.</em></h1>
       <p class="lead">I'm Michael Yadlosky, a Professional Sales &amp; Entrepreneurship student at Stetson University, founder of its first undergraduate consulting club, an early-stage investment analyst, and a corporate sales intern at one of the fastest-growing U.S. insurance brokerages.</p>
       <div class="cta-row">
@@ -452,11 +457,11 @@
         <h3>Investment Analyst, Hatter Angels &nbsp;·&nbsp; Growth &amp; Strategy Lead, GolfSim24</h3>
         <div class="org">Selected to screen 60+ early-stage deals per semester for a $1.62M angel fund, and to lead market analysis &amp; financial projections for GolfSim24's Florida expansion.</div>
       </div>
-      <div class="tl-item">
-        <div class="tl-date">Jun – Jul 2026</div>
-        <h3>Sales Intern, Corporate HQ</h3>
-        <div class="org">Foundation Risk Partners · Ormond Beach, FL</div>
-        <p>Selected for an 8-week internship at the national HQ of one of the fastest-growing U.S. insurance brokerages, rotating across Commercial P&amp;C, Risk Management, and Employee Benefits, using Microsoft Copilot to research and synthesize commercial policy information.</p>
+      <div class="tl-item current">
+        <div class="tl-date">Current · June 8 – July 31, 2026</div>
+        <h3>Sales Intern, Corporate HQ <span class="tl-now">Now</span></h3>
+        <div class="org">Foundation Risk Partners · Sales &amp; Production Team · Ormond Beach, FL</div>
+        <p>Chosen as 1 of roughly 40 interns from 3,000 applicants for the summer program at the national HQ of one of the fastest-growing U.S. insurance brokerages. I rotate across Commercial P&amp;C, Risk Management, and Employee Benefits while doing real producer work: I built a full marketing submission to an underwriter on a live account, and I'm presenting a client proposal in a live sales roleplay. Deep in Excel and PowerPoint daily, and soaking up the culture, from CEO Charlie Lydecker's "No A**hole Rule" to Ross Beach's "paralysis by analysis."</p>
       </div>
       <div class="tl-item">
         <div class="tl-date">Mar 2026 – Present</div>
@@ -494,6 +499,7 @@
       <h2>A few things I'm proud of</h2>
     </div>
     <div class="work-grid">
+      <div class="work reveal"><div class="body"><span class="tag">Sales · Current</span><h3>1 of ~40 interns chosen from 3,000 applicants</h3><p>Selected for Foundation Risk Partners' summer HQ program on the Sales &amp; Production team, rotating across Commercial P&amp;C, Risk Management, and Employee Benefits.</p></div></div>
       <div class="work reveal"><div class="body"><span class="tag">Entrepreneurship</span><h3>Founded Stetson's first undergraduate consulting club</h3><p>Built Hatter Consulting from scratch, recruited a full exec board, landed a board director, and launched fall recruitment.</p></div></div>
       <div class="work reveal"><div class="body"><span class="tag">Philanthropy</span><h3>Ran a $60K+ charity golf tournament for St. Jude</h3><p>Co-coordinated and emceed Pars and a Purpose, running the live auction and awards, and I'm back to lead it again in 2026.</p></div></div>
       <div class="work reveal"><div class="body"><span class="tag">Business Development</span><h3>Turned $643K of sales data into a sharper product line</h3><p>Analyzed Winola Farm's revenue across Excel &amp; Square POS and drove a product-line rationalization informing pricing across 5+ sites.</p></div></div>
